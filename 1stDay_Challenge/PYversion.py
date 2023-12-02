@@ -10,3 +10,13 @@ class Gifts():
             if num in self.ids[i+1:]:
                 return num
         return result
+    
+    # Return first id is repeted in the previous ids of the list
+    def first_repeted(self):
+        result = -1
+        ids = []
+        for id in self.ids:
+            if id in ids:   
+                return id
+            ids.append(id)
+        return result
