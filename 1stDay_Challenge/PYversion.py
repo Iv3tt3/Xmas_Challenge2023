@@ -20,3 +20,13 @@ class Gifts():
                 return id
             ids.append(id)
         return result
+    
+    # Return a dict of the repeated ids and how many times
+    def times_repeted(self):
+        result = {}
+        ids = []
+        for id in self.ids:
+            if id in ids:   
+                result[str(id)] = (lambda: result[str(id)] + 1 if str(id) in result else 1)()
+            ids.append(id)
+        return result
