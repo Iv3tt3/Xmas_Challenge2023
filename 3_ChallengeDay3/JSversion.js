@@ -7,7 +7,7 @@ function findNaughtyStep(original, modified) {
             result = original[i]
             break
         }
-        if (original.length < modified.lenght || original[i] != modified[i]){
+        if (original[i] != modified[i]){
             result = modified[i]
             break
         }
